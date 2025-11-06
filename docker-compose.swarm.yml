@@ -1,0 +1,36 @@
+version: '3.8' # Usar una versión compatible con Swarm
+
+services:
+  # Nombre del servicio dentro del stack
+  __ARTIFACT_ID__:
+    image: dockerregistry.vinalssoler.com:5000/vs/__ARTIFACT_ID__:__IMAGE_TAG__
+    environment:
+      APP_NAME: __ARTIFACT_ID__
+    networks:
+      # Conectar el servicio a la red overlay de Traefik
+      - traefik-public
+    deploy:
+      # Configuración específica de Swarm
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: stop-first
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=traefik-public"
+        - "traefik.http.routers.__ARTIFACT_ID__-api-router.rule=Host(`api.vinalssoler.com`) && PathPrefix(`/v1/__ARTIFACT_ID__`)"
+        - "traefik.http.routers.__ARTIFACT_ID__-api-router.entrypoints=https"
+        - "traefik.http.routers.__ARTIFACT_ID__-api-router.service=__ARTIFACT_ID__-api-service"
+        - "traefik.http.routers.__ARTIFACT_ID__-api-router.tls=true"
+        - "traefik.http.services.__ARTIFACT_ID__-api-service.loadbalancer.server.port=8282"
+networks:
+  traefik-public:
+    external: true
+    name: traefik-public

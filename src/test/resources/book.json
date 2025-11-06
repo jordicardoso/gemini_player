@@ -1,0 +1,613 @@
+{
+  "meta": {
+    "title": "El silencio de la taiga",
+    "description": "Abres los ojos. El mundo es una mancha borrosa de blanco y gris. El viento, un aullido incesante que lo devora todo, es el único sonido en este universo helado. Intentas moverte y un grito ahogado se congela en tu garganta. Tu pierna izquierda es una fuente de agonía pura; la tela del pantalón, oscura y rígida por la sangre, se ha pegado a un desgarro profundo que supura lentamente.",
+    "author": "Jordi Cardoso",
+    "imageId": "de7d0e98-89bb-4ad6-8ed2-e13926682bc7"
+  },
+  "nodes": [
+    {
+      "id": "72b6e037-72e9-4689-ae6d-78ccdf847185",
+      "type": "start",
+      "dimensions": {
+        "width": 250,
+        "height": 239
+      },
+      "computedPosition": {
+        "x": 390,
+        "y": 52,
+        "z": 1000
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "72b6e037-72e9-4689-ae6d-78ccdf847185",
+            "position": "bottom",
+            "x": 120,
+            "y": 232.578125,
+            "width": 10,
+            "height": 10
+          }
+        ],
+        "target": null
+      },
+      "selected": true,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 390,
+        "y": 52
+      },
+      "data": {
+        "description": "Abres los ojos. El mundo es una mancha borrosa de blanco y gris. El viento, un aullido incesante que lo devora todo, es el único sonido en este universo helado. Intentas moverte y un grito ahogado se congela en tu garganta. Tu pierna izquierda es una fuente de agonía pura; la tela del pantalón, oscura y rígida por la sangre, se ha pegado a un desgarro profundo que supura lentamente.\\n\\nTu cabeza se alza con un esfuerzo titánico. Y entonces lo ves.\\n\\nSobre ti, a unos diez metros, está el esqueleto de la avioneta. El fuselaje partido en dos cuelga en un ángulo imposible sobre el abismo, crujiendo lastimosamente con cada ráfaga de viento. La carlinga, tu ataúd de aluminio, es un amasijo de cristales rotos y metal retorcido.\\n\\nCon un esfuerzo que te deja sin aliento, te arrastras centímetro a centímetro, alejándote del borde. Es entonces cuando te das cuenta de tu entorno. No es un simple saliente, sino una plataforma irregular de roca, de varios metros de ancho, una cicatriz en la cara del precipicio. Al fondo, contra la pared vertical de la montaña, la nieve se ha acumulado contra un conjunto de rocas desplomadas, creando una profunda hendidura en la pared, un hueco oscuro que promete un respiro contra el viento asesino. Un refugio improvisado. Una posible tumba de piedra.\\n\\n\\\"¿Anya?\\\".\\n\\nEl nombre es un susurro roto, robado por el viento al instante. Un destello de memoria te asalta, tan vívido que duele más que el frío.\\n\\nOcho horas antes. La calidez artificial de la cabina. Anya te pasa un termo. Su rostro, habitualmente sereno, está marcado por una urgencia que no habías visto en años. \\\"Gracias por hacer esto, de verdad\\\", dice, su voz tensa. \\\"El Ministerio dice que es crucial que llegue a Kholodnygrad antes de cuarenta y ocho horas\\\". No te dio más detalles. Anya, la brillante ingeniera nuclear, siempre había sido un libro cerrado, incluso cuando erais algo más que amigos.\\n\\nLuego, el cielo se incendió. No fue una aurora. Fue una danza espectral, un sudario de luz verde y violeta que envolvió la avioneta. Los instrumentos enloquecieron, las luces parpadearon y el motor emitió un gemido agónico antes de rendirse al silencio. Lo último que recuerdas es el grito del metal y la mano de Anya buscando la tuya en la oscuridad que se precipitaba.\\n\\nAhora, su mano no está. No hay nada. Solo tú, el dolor y este precario nido de buitre.\\n\\nMiras hacia arriba, hacia la herida abierta del avión. ¿Cayó ella? ¿Está todavía dentro? ¿O consiguió salir por el otro lado, en la cima del precipicio? La esperanza es una llama diminuta y vacilante en la ventisca.\\n\\nEl entorno es un monolito de indiferencia. Picos afilados como dientes de tiburón se pierden en un cielo de color gris plomizo. No hay árboles, no hay señales de vida, solo roca, hielo y un viento que promete congelar la sangre en tus venas si no haces algo pronto. Cada segundo que pasas aquí, inmóvil, es una victoria para la montaña.\\n\\nEl dolor en tu pierna es un recordatorio brutal de tu fragilidad. Eres un hombre roto, suspendido entre la muerte y un milagro improbable. Pero Anya... Anya estaba arriba. Tienes que saberlo. Tienes que intentarlo.\\n\\nEl viento aúlla, y tienes que tomar una decisión. La sangre sigue manando. El frío es implacable.",
+        "imageId": "5972dfb7-553f-4ea7-b282-71d6be9865ed",
+        "tags": [
+          "Cap.1"
+        ],
+        "color": "#00a300",
+        "size": "medium"
+      },
+      "events": {},
+      "label": "Accidente",
+      "tags": [],
+      "actions": []
+    },
+    {
+      "id": "967d2d1a-0901-4da9-a203-de5938ea9e4d",
+      "type": "story",
+      "dimensions": {
+        "width": 74,
+        "height": 133
+      },
+      "computedPosition": {
+        "x": 258.4887039239001,
+        "y": 382.5112960760999,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "967d2d1a-0901-4da9-a203-de5938ea9e4d",
+            "position": "bottom",
+            "x": 31.8124829136911,
+            "y": 127.39078271136037,
+            "width": 10,
+            "height": 10
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "967d2d1a-0901-4da9-a203-de5938ea9e4d",
+            "position": "top",
+            "x": 31.8124829136911,
+            "y": -3.9999789887622983,
+            "width": 10,
+            "height": 10
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 258.4887039239001,
+        "y": 382.5112960760999
+      },
+      "data": {
+        "description": "",
+        "imageId": "467c1443-34e5-424d-9c93-61c838019fc6",
+        "color": "#2e005c",
+        "size": "medium"
+      },
+      "events": {},
+      "label": "Cueva",
+      "tags": [],
+      "actions": []
+    },
+    {
+      "id": "b5e2f5f7-cade-4d61-88f0-cc1bb6c5592c",
+      "type": "story",
+      "dimensions": {
+        "width": 153,
+        "height": 70
+      },
+      "computedPosition": {
+        "x": 795.5280735846279,
+        "y": 422.8315584922326,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "b5e2f5f7-cade-4d61-88f0-cc1bb6c5592c",
+            "position": "bottom",
+            "x": 71.25,
+            "y": 63.75,
+            "width": 10,
+            "height": 10
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "b5e2f5f7-cade-4d61-88f0-cc1bb6c5592c",
+            "position": "top",
+            "x": 71.25,
+            "y": -3.999969482421875,
+            "width": 10,
+            "height": 10
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 795.5280735846279,
+        "y": 422.8315584922326
+      },
+      "data": {
+        "description": "Escribe aquí el párrafo...",
+        "color": "#455a64",
+        "size": "medium"
+      },
+      "events": {},
+      "label": "Rodeas la montaña"
+    },
+    {
+      "id": "8f140b51-9c8c-4e0b-a126-18540be53ab6",
+      "type": "end",
+      "dimensions": {
+        "width": 193,
+        "height": 70
+      },
+      "computedPosition": {
+        "x": 18.627123155281154,
+        "y": 612.3892897103996,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": null,
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "8f140b51-9c8c-4e0b-a126-18540be53ab6",
+            "position": "top",
+            "x": 91.53124809265137,
+            "y": -4,
+            "width": 10,
+            "height": 10
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 18.627123155281154,
+        "y": 612.3892897103996
+      },
+      "data": {
+        "description": "Te pierdes en la cueva y mueres",
+        "color": "#d32f2f",
+        "size": "medium"
+      },
+      "events": {},
+      "label": "Fin 1"
+    },
+    {
+      "id": "c9dc27bc-eea8-461e-ac37-6714d80c5327",
+      "type": "end",
+      "dimensions": {
+        "width": 250,
+        "height": 105
+      },
+      "computedPosition": {
+        "x": 278.1287072041924,
+        "y": 593.2176801048098,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": null,
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "c9dc27bc-eea8-461e-ac37-6714d80c5327",
+            "position": "top",
+            "x": 120,
+            "y": -4,
+            "width": 10,
+            "height": 10
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 278.1287072041924,
+        "y": 593.2176801048098
+      },
+      "data": {
+        "description": "Pierdes el equilibrio y te caes, el resultado es una pierna rota. No tienes fuerzas para continuar y mueres de inanición",
+        "color": "#d32f2f",
+        "size": "medium"
+      },
+      "events": {},
+      "label": "Fin 2"
+    },
+    {
+      "id": "b533f2b0-9bcc-4585-b0b4-4ad84ad4b529",
+      "type": "story",
+      "dimensions": {
+        "width": 343,
+        "height": 70
+      },
+      "computedPosition": {
+        "x": 581.9570975986026,
+        "y": 610.9602656964249,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "b533f2b0-9bcc-4585-b0b4-4ad84ad4b529",
+            "position": "bottom",
+            "x": 166.484375,
+            "y": 63.75,
+            "width": 10,
+            "height": 10
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "b533f2b0-9bcc-4585-b0b4-4ad84ad4b529",
+            "position": "top",
+            "x": 166.484375,
+            "y": -4,
+            "width": 10,
+            "height": 10
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 581.9570975986026,
+        "y": 610.9602656964249
+      },
+      "data": {
+        "description": "Puedes salir por otra obertura de la cueva y llegas a un valle.",
+        "color": "#455a64",
+        "size": "medium"
+      },
+      "events": {},
+      "label": "Atraviesas la cueva"
+    },
+    {
+      "id": "9df6fe35-06c0-4184-a3e6-993c14e35109",
+      "type": "story",
+      "dimensions": {
+        "width": 153,
+        "height": 202
+      },
+      "computedPosition": {
+        "x": 829.183453035105,
+        "y": 732.0809195752671,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "9df6fe35-06c0-4184-a3e6-993c14e35109",
+            "position": "bottom",
+            "x": 71.25002473992006,
+            "y": 195.75019390435136,
+            "width": 10,
+            "height": 10
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "9df6fe35-06c0-4184-a3e6-993c14e35109",
+            "position": "top",
+            "x": 71.25002473992006,
+            "y": -3.999928720719259,
+            "width": 10,
+            "height": 10
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 829.183453035105,
+        "y": 732.0809195752671
+      },
+      "data": {
+        "description": "Escribe aquí el párrafo...",
+        "imageId": "321513a5-6a89-4fb8-8aab-0e0c26357be3",
+        "color": "#455a64",
+        "size": "medium"
+      },
+      "events": {},
+      "label": "El valle"
+    }
+  ],
+  "edges": [
+    {
+      "id": "vueflow__edge-72b6e037-72e9-4689-ae6d-78ccdf847185-967d2d1a-0901-4da9-a203-de5938ea9e4d",
+      "source": "72b6e037-72e9-4689-ae6d-78ccdf847185",
+      "target": "967d2d1a-0901-4da9-a203-de5938ea9e4d",
+      "label": "Entra en la cueva",
+      "data": {
+        "description": "Decides entrar en la cueva"
+      }
+    },
+    {
+      "id": "51e1a4bf-ea13-466e-8cc0-843aeb28df08",
+      "source": "72b6e037-72e9-4689-ae6d-78ccdf847185",
+      "target": "b5e2f5f7-cade-4d61-88f0-cc1bb6c5592c",
+      "label": "Rodea la montaña",
+      "data": {
+        "description": "Decides rodear la montaña"
+      }
+    },
+    {
+      "id": "e2de2da7-8cc7-4781-9d71-18cb23b8484e",
+      "source": "967d2d1a-0901-4da9-a203-de5938ea9e4d",
+      "target": "8f140b51-9c8c-4e0b-a126-18540be53ab6",
+      "label": "Exploración Cueva",
+      "data": {}
+    },
+    {
+      "id": "bc906e5e-75c2-4151-bdbc-1c1bb81adcd2",
+      "source": "967d2d1a-0901-4da9-a203-de5938ea9e4d",
+      "target": "c9dc27bc-eea8-461e-ac37-6714d80c5327",
+      "label": "",
+      "data": {}
+    },
+    {
+      "id": "3ea80edc-0886-4106-a354-2b35d1a449d7",
+      "source": "967d2d1a-0901-4da9-a203-de5938ea9e4d",
+      "target": "b533f2b0-9bcc-4585-b0b4-4ad84ad4b529",
+      "label": "",
+      "data": {}
+    },
+    {
+      "id": "e35ef600-67d2-4c11-a384-a661ba56714d",
+      "source": "b533f2b0-9bcc-4585-b0b4-4ad84ad4b529",
+      "target": "9df6fe35-06c0-4184-a3e6-993c14e35109",
+      "label": "",
+      "data": {}
+    },
+    {
+      "id": "579cc789-984c-4ded-9234-464539eaa7c9",
+      "source": "b5e2f5f7-cade-4d61-88f0-cc1bb6c5592c",
+      "target": "9df6fe35-06c0-4184-a3e6-993c14e35109",
+      "label": "",
+      "data": {}
+    }
+  ],
+  "assets": [
+    {
+      "id": "5972dfb7-553f-4ea7-b282-71d6be9865ed",
+      "name": "accidente",
+      "category": "general",
+      "type": "image",
+      "filename": "5972dfb7-553f-4ea7-b282-71d6be9865ed.jpeg",
+      "creationDate": "2025-10-27T08:49:47.743Z"
+    },
+    {
+      "id": "0c6d4230-a270-47ee-9b6a-12826f70f6e2",
+      "name": "TigreSiberiano",
+      "category": "general",
+      "type": "image",
+      "filename": "0c6d4230-a270-47ee-9b6a-12826f70f6e2.png",
+      "creationDate": "2025-10-27T08:50:10.478Z"
+    },
+    {
+      "id": "b5556dd9-9be7-414b-bade-eb6cb20b16ac",
+      "name": "loboGris",
+      "category": "general",
+      "type": "image",
+      "filename": "b5556dd9-9be7-414b-bade-eb6cb20b16ac.png",
+      "creationDate": "2025-10-27T08:50:16.741Z"
+    },
+    {
+      "id": "467c1443-34e5-424d-9c93-61c838019fc6",
+      "name": "oso_pardo",
+      "category": "general",
+      "type": "image",
+      "filename": "467c1443-34e5-424d-9c93-61c838019fc6.png",
+      "creationDate": "2025-10-27T08:50:23.268Z"
+    },
+    {
+      "id": "7c38ca5b-bfe3-4f49-984d-2cfb634810a3",
+      "name": "yeti",
+      "category": "general",
+      "type": "image",
+      "filename": "7c38ca5b-bfe3-4f49-984d-2cfb634810a3.png",
+      "creationDate": "2025-10-27T08:50:30.406Z"
+    },
+    {
+      "id": "6083d596-973f-48d0-ae68-20ac4d86de73",
+      "name": "niebla_taiga",
+      "category": "general",
+      "type": "image",
+      "filename": "6083d596-973f-48d0-ae68-20ac4d86de73.png",
+      "creationDate": "2025-10-27T08:50:38.711Z"
+    },
+    {
+      "id": "53a9b5ab-d25b-4f6b-9ab7-e70b501e9029",
+      "name": "ventisca_taiga",
+      "category": "general",
+      "type": "image",
+      "filename": "53a9b5ab-d25b-4f6b-9ab7-e70b501e9029.png",
+      "creationDate": "2025-10-27T08:50:52.492Z"
+    },
+    {
+      "id": "321513a5-6a89-4fb8-8aab-0e0c26357be3",
+      "name": "taiga_rio",
+      "category": "general",
+      "type": "image",
+      "filename": "321513a5-6a89-4fb8-8aab-0e0c26357be3.png",
+      "creationDate": "2025-10-27T08:51:00.242Z"
+    },
+    {
+      "id": "d2619e19-f632-40a9-ab1d-d93bb92ff6d3",
+      "name": "pueblo_taiga",
+      "category": "general",
+      "type": "image",
+      "filename": "d2619e19-f632-40a9-ab1d-d93bb92ff6d3.png",
+      "creationDate": "2025-10-27T08:51:18.519Z"
+    },
+    {
+      "id": "de7d0e98-89bb-4ad6-8ed2-e13926682bc7",
+      "name": "montaña_Urales",
+      "category": "general",
+      "type": "image",
+      "filename": "de7d0e98-89bb-4ad6-8ed2-e13926682bc7.png",
+      "creationDate": "2025-10-27T08:51:28.103Z"
+    },
+    {
+      "id": "5ded1d1b-5225-417b-ad15-f2ffa44d58dd",
+      "name": "mapa_general",
+      "category": "map",
+      "type": "image",
+      "filename": "5ded1d1b-5225-417b-ad15-f2ffa44d58dd.png",
+      "creationDate": "2025-10-27T08:51:40.529Z"
+    }
+  ],
+  "variables": [],
+  "viewport": {
+    "event": {
+      "type": "end",
+      "sourceEvent": {
+        "isTrusted": true
+      },
+      "transform": {
+        "k": 0.2,
+        "x": 670.1815703298082,
+        "y": 311.23251853017325
+      }
+    },
+    "flowTransform": {
+      "x": 670.1815703298082,
+      "y": 311.23251853017325,
+      "zoom": 0.2
+    }
+  },
+  "characterSheetSchema": {
+    "layout": [
+      {
+        "type": "stats",
+        "title": "Estadísticas Principales",
+        "icon": "analytics",
+        "dataKey": "stats"
+      },
+      {
+        "title": "Ropa",
+        "icon": "checkroom",
+        "dataKey": "itemSection_slots_1762268755185",
+        "type": "itemSection",
+        "mode": "slots"
+      },
+      {
+        "title": "Eventos",
+        "icon": "event_note",
+        "dataKey": "events_default_1762284496085",
+        "type": "events"
+      }
+    ]
+  },
+  "characterSheet": {
+    "stats": {
+      "sensación térmica": {
+        "current": 5,
+        "max": 30,
+        "min": -25
+      },
+      "fatiga": {
+        "current": 80,
+        "max": 100,
+        "min": 0
+      },
+      "hambre": {
+        "current": 50,
+        "max": 100,
+        "min": 0
+      },
+      "sed": {
+        "current": 50,
+        "max": 100,
+        "min": 0
+      }
+    },
+    "itemSection_slots_1762268755185": {
+      "cabeza": {
+        "name": "Gorro",
+        "description": "",
+        "effects": [
+          {
+            "target": "temperatura",
+            "value": 2
+          }
+        ],
+        "id": "fbcbfd92-2921-4fc8-86f5-1406472f210e"
+      }
+    },
+    "events_default_1762284496085": [
+      {
+        "id": "E001",
+        "name": "Curación Accidente",
+        "happened": false
+      },
+      {
+        "id": "E002",
+        "name": "Ropa de Anya",
+        "happened": false
+      },
+      {
+        "id": "E003",
+        "name": "Niebla 1",
+        "happened": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+FROM registry.access.redhat.com/ubi9/ubi-minimal:latest
+WORKDIR /work/
+
+COPY target/*-runner ./application-runner
+EXPOSE 8282
+
+ENTRYPOINT ["./application-runner"]
+CMD ["-Dquarkus.http.port=8282"]

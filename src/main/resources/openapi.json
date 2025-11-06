@@ -1,0 +1,55 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "gbook",
+        "version": "1.0.0",
+        "description": "Gbook API"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8081",
+            "description": "Servidor de desarrollo local"
+        }
+    ],
+    "paths": {
+        "/gbook/v1/book": {
+            "description": "API para jugar un librojuego con Gemini.",
+            "post": {
+                "operationId": "postBook",
+                "summary": "Carga un librojuego para que lo juegue Gemini",
+                "description": "Este endpoint recibe la estructura completa de un librojuego en formato JSON y comienza una partida.",
+                "requestBody": {
+                    "description": "El objeto JSON completo del librojuego.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "202": {
+                        "description": "Aceptado. El librojuego ha sido recibido y el proceso ha comenzado de forma asíncrona."
+                    },
+                    "400": {
+                        "description": "Petición inválida. El JSON proporcionado no es válido o está mal formado."
+                    }
+                }
+            }
+        },
+        "/gbook/v1/health": {
+            "get": {
+                "operationId": "getHealth",
+                "summary": "Health Check",
+                "description": "Comprueba el estado del servicio.",
+                "responses": {
+                    "200": {
+                        "description": "Servicio operativo."
+                    }
+                }
+            }
+        }
+    }
+}
