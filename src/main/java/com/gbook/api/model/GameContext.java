@@ -1,12 +1,12 @@
-// Ejemplo de GameContext.java
+// Fichero: src/main/java/com/gbook/api/model/GameContext.java
 package com.gbook.api.model;
 
 public class GameContext {
-    private Node currentNode;
-    private PlayerState playerState;
-    private JsonGamebook gamebook; // Añadir el gamebook completo
+    private final Node currentNode;
+    private final CharacterSheet playerState; // <-- CORRECCIÓN: Usamos CharacterSheet
+    private final JsonGamebook gamebook;
 
-    public GameContext(Node currentNode, PlayerState playerState, JsonGamebook gamebook) {
+    public GameContext(Node currentNode, CharacterSheet playerState, JsonGamebook gamebook) {
         this.currentNode = currentNode;
         this.playerState = playerState;
         this.gamebook = gamebook;
@@ -16,13 +16,11 @@ public class GameContext {
         return currentNode;
     }
 
-    public PlayerState getPlayerState() {
+    public CharacterSheet getPlayerState() { // <-- El tipo de retorno ahora es CharacterSheet
         return playerState;
     }
 
-    public JsonGamebook getGamebook() { // Getter para el gamebook
+    public JsonGamebook getGamebook() {
         return gamebook;
     }
-    // ... otros getters si son necesarios
 }
-    

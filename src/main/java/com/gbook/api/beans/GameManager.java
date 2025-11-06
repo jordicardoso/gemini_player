@@ -1,7 +1,7 @@
 // Fichero: src/main/java/com/gbook/api/beans/GameManager.java
 package com.gbook.api.beans;
 
-import com.gbook.api.model.Edge;
+import com.gbook.api.model.CharacterSheet;
 import com.gbook.api.model.GameContext;
 import com.gbook.api.model.JsonGamebook;
 import com.gbook.api.model.Node;
@@ -24,7 +24,7 @@ public class GameManager {
     private static final Logger LOG = LoggerFactory.getLogger(GameManager.class);
 
     private JsonGamebook currentGamebook;
-    private PlayerState playerState;
+    private CharacterSheet playerState;
     private String currentPosition; // ID del nodo actual
 
     // Usamos un mapa para un acceso súper rápido a los nodos por su ID
@@ -51,7 +51,11 @@ public class GameManager {
         }
 
         // Inicializa el estado del jugador (podrías cargarlo desde el JSON también)
-        this.playerState = new PlayerState();
+        this.playerState = gamebook.getCharacterSheet();
+        if (this.playerState == null) {
+            LOG.warn("No characterSheet found in the gamebook. Player state will be empty.");
+            this.playerState = new CharacterSheet(); // Creamos uno vacío para evitar NullPointerExceptions
+        }
         // Aquí podrías cargar el estado inicial desde gamebook.getCharacterSheet() si lo deseas.
 
         LOG.info("Game loaded. Starting at node: {}. Node map initialized with {} nodes.",
@@ -123,7 +127,7 @@ public class GameManager {
         return currentGamebook;
     }
 
-    public PlayerState getPlayerState() {
+    public CharacterSheet getPlayerState() {
         return playerState;
     }
 

@@ -1,12 +1,15 @@
 // Fichero: src/main/java/com/gbook/api/beans/PromptBuilder.java
 package com.gbook.api.beans;
 
+import com.gbook.api.model.CharacterEvent;
+import com.gbook.api.model.CharacterSheet;
 import com.gbook.api.model.GameContext;
-import com.gbook.api.model.Edge; // Importamos la clase Edge
+import com.gbook.api.model.Item;
 import io.quarkus.runtime.annotations.RegisterForReflection;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Named;
 
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @RegisterForReflection
@@ -22,28 +25,50 @@ public class PromptBuilder {
         StringBuilder prompt = new StringBuilder();
         prompt.append("Eres un jugador de rol que debe tomar la mejor decisión para sobrevivir y progresar en la historia.\n\n");
 
-        // 1. Estado del Personaje (simplificado para mayor claridad)
+        // --- ¡AQUÍ ESTÁ LA CORRECCIÓN CLAVE! ---
+        // 1. Estado del Personaje (ahora mucho más completo)
         prompt.append("== ESTADO ACTUAL ==\n");
-        if (context.getPlayerState() != null && context.getPlayerState().getStats() != null) {
-            String statsString = context.getPlayerState().getStats().entrySet().stream()
-                    .map(entry -> entry.getKey() + ": " + entry.getValue().getCurrent())
-                    .collect(Collectors.joining(", "));
-            prompt.append("Estadísticas: ").append(statsString).append("\n");
-        }
-        // Podríamos añadir el inventario de forma similar si fuera necesario
-        prompt.append("\n");
+        CharacterSheet playerState = context.getPlayerState();
+        if (playerState != null) {
+            // Estadísticas
+            if (playerState.getStats() != null && !playerState.getStats().isEmpty()) {
+                String statsString = playerState.getStats().entrySet().stream()
+                        .map(entry -> entry.getKey() + ": " + entry.getValue().getCurrent() + "/" + entry.getValue().getMax())
+                        .collect(Collectors.joining(", "));
+                prompt.append("Estadísticas: ").append(statsString).append("\n");
+            }
 
+            // Inventario/Items
+            if (playerState.getItemSectionSlots() != null && !playerState.getItemSectionSlots().isEmpty()) {
+                String itemsString = playerState.getItemSectionSlots().entrySet().stream()
+                        .map(entry -> entry.getKey() + ": " + entry.getValue().getName())
+                        .collect(Collectors.joining(", "));
+                prompt.append("Equipamiento: ").append(itemsString).append("\n");
+            }
+
+            // Eventos Activos
+            if (playerState.getEventsDefault() != null && !playerState.getEventsDefault().isEmpty()) {
+                String eventsString = playerState.getEventsDefault().stream()
+                        .filter(CharacterEvent::isHappened) // Mostramos solo los eventos que han ocurrido
+                        .map(CharacterEvent::getName)
+                        .collect(Collectors.joining(", "));
+                if (!eventsString.isEmpty()) {
+                    prompt.append("Eventos: ").append(eventsString).append("\n");
+                }
+            }
+        }
+        prompt.append("\n");
 
         // 2. Situación Actual (la descripción del nodo actual)
         prompt.append("== SITUACIÓN ==\n");
         prompt.append(context.getCurrentNode().getData().getDescription()).append("\n\n");
 
-        // 3. Opciones Disponibles (obtenidas de los 'edges' que salen del nodo actual)
+        // 3. Opciones Disponibles
         prompt.append("== OPCIONES ==\n");
         String currentNodeId = context.getCurrentNode().getId();
         String options = context.getGamebook().getEdges().stream()
-                .filter(edge -> currentNodeId.equals(edge.getSource())) // Filtramos los edges que salen del nodo actual
-                .map(edge -> "Opción con ID '" + edge.getTarget() + "': " + edge.getLabel()) // Usamos el target del edge como ID de la opción
+                .filter(edge -> currentNodeId.equals(edge.getSource()))
+                .map(edge -> "Opción con ID '" + edge.getTarget() + "': " + edge.getLabel())
                 .collect(Collectors.joining("\n"));
 
         if (options.isEmpty()) {
