@@ -1,0 +1,562 @@
+# Created at 2025-11-26T22:01:13.052
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (105065@tic-001p):
+"main" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:790)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1160)
+        at java.base@21.0.9/java.util.concurrent.Semaphore.tryAcquire(Semaphore.java:415)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.acquireOnePermit(ForkedBooter.java:524)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.acknowledgedExit(ForkedBooter.java:374)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:178)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@21.0.9/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@21.0.9/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+        at java.base@21.0.9/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/java.lang.Object.wait0(Native Method)
+        at java.base@21.0.9/java.lang.Object.wait(Object.java:366)
+        at java.base@21.0.9/java.lang.Object.wait(Object.java:339)
+        at java.base@21.0.9/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+        at java.base@21.0.9/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+        at java.base@21.0.9/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+        at java.base@21.0.9/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1886)
+        at java.base@21.0.9/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+        at java.base@21.0.9/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+        at java.base@21.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+        at java.base@21.0.9/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+        at java.base@21.0.9/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:186)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1797)
+        at java.base@21.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@21.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@21.0.9/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@21.0.9/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:187)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:315)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:367)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:330)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"Reference Reaper #1" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1746)
+        at java.base@21.0.9/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:67)
+        at java.base@21.0.9/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+        at java.base@21.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:234)
+        at app//io.smallrye.common.ref.References$ReaperThread.run(References.java:63)
+
+"ForkJoinPool.commonPool-worker-1" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"Quarkus hang detection timer thread" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1797)
+        at java.base@21.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@21.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"ForkJoinPool.commonPool-worker-2" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-3" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-4" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-5" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-6" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-7" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-8" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-9" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-10" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-11" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-12" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-13" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-14" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"ForkJoinPool.commonPool-worker-15" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+        at java.base@21.0.9/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+"executor-thread-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at org.jboss.threads.EnhancedQueueExecutor$PoolThreadNode.park(EnhancedQueueExecutor.java:2434)
+        at org.jboss.threads.EnhancedQueueExecutor.runThreadBody(EnhancedQueueExecutor.java:1668)
+        at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1589)
+        at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:11)
+        at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:11)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"vertx-blocked-thread-checker" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/java.lang.Object.wait0(Native Method)
+        at java.base@21.0.9/java.lang.Object.wait(Object.java:366)
+        at java.base@21.0.9/java.util.TimerThread.mainLoop(Timer.java:563)
+        at java.base@21.0.9/java.util.TimerThread.run(Timer.java:516)
+
+"Camel (camel-1) thread #1 - seda://startGameLoop" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1797)
+        at java.base@21.0.9/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+        at org.apache.camel.component.seda.SedaConsumer.doRun(SedaConsumer.java:178)
+        at org.apache.camel.component.seda.SedaConsumer.run(SedaConsumer.java:129)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"camel-main" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:788)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1024)
+        at java.base@21.0.9/java.util.concurrent.locks.ReentrantLock$Sync.lock(ReentrantLock.java:153)
+        at java.base@21.0.9/java.util.concurrent.locks.ReentrantLock.lock(ReentrantLock.java:322)
+        at org.apache.camel.support.service.BaseService.stop(BaseService.java:150)
+        at org.apache.camel.quarkus.main.CamelMain.runEngine(CamelMain.java:133)
+        at org.apache.camel.quarkus.main.CamelMainRuntime.lambda$start$0(CamelMainRuntime.java:53)
+        at org.apache.camel.quarkus.main.CamelMainRuntime$$Lambda/0x00007422348e5b88.run(Unknown Source)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"vert.x-eventloop-thread-0" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@21.0.9/sun.nio.ch.EPoll.wait(Native Method)
+        at java.base@21.0.9/sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:121)
+        at java.base@21.0.9/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@21.0.9/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"vert.x-eventloop-thread-1" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@21.0.9/sun.nio.ch.EPoll.wait(Native Method)
+        at java.base@21.0.9/sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:121)
+        at java.base@21.0.9/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@21.0.9/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"vert.x-acceptor-thread-0" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@21.0.9/sun.nio.ch.EPoll.wait(Native Method)
+        at java.base@21.0.9/sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:121)
+        at java.base@21.0.9/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@21.0.9/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"vert.x-eventloop-thread-2" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@21.0.9/sun.nio.ch.EPoll.wait(Native Method)
+        at java.base@21.0.9/sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:121)
+        at java.base@21.0.9/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@21.0.9/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"Camel (camel-1) thread #2 - Delay" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:790)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1160)
+        at java.base@21.0.9/java.util.concurrent.CountDownLatch.await(CountDownLatch.java:276)
+        at org.apache.camel.component.seda.SedaProducer.process(SedaProducer.java:125)
+        at org.apache.camel.processor.SendProcessor.sendUsingProducer(SendProcessor.java:253)
+        at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:158)
+        at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.handleFirst(RedeliveryErrorHandler.java:440)
+        at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:416)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.doRun(DefaultReactiveExecutor.java:199)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.executeReactiveWork(DefaultReactiveExecutor.java:189)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.tryExecuteReactiveWork(DefaultReactiveExecutor.java:166)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:148)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor.schedule(DefaultReactiveExecutor.java:54)
+        at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:421)
+        at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:392)
+        at org.apache.camel.processor.DelayProcessorSupport$ProcessCall$1.done(DelayProcessorSupport.java:79)
+        at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:61)
+        at org.apache.camel.processor.DelayProcessorSupport$ProcessCall.run(DelayProcessorSupport.java:70)
+        at java.base@21.0.9/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+        at java.base@21.0.9/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at java.base@21.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"Camel (camel-1) thread #3 - Delay" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:790)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1160)
+        at java.base@21.0.9/java.util.concurrent.CountDownLatch.await(CountDownLatch.java:276)
+        at org.apache.camel.component.seda.SedaProducer.process(SedaProducer.java:125)
+        at org.apache.camel.processor.SendProcessor.sendUsingProducer(SendProcessor.java:253)
+        at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:158)
+        at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.handleFirst(RedeliveryErrorHandler.java:440)
+        at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:416)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.doRun(DefaultReactiveExecutor.java:199)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.executeReactiveWork(DefaultReactiveExecutor.java:189)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.tryExecuteReactiveWork(DefaultReactiveExecutor.java:166)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:148)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor.schedule(DefaultReactiveExecutor.java:54)
+        at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:421)
+        at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:392)
+        at org.apache.camel.processor.DelayProcessorSupport$ProcessCall$1.done(DelayProcessorSupport.java:79)
+        at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:61)
+        at org.apache.camel.processor.DelayProcessorSupport$ProcessCall.run(DelayProcessorSupport.java:70)
+        at java.base@21.0.9/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+        at java.base@21.0.9/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at java.base@21.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"SIGINT handler" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.9/java.lang.Object.wait0(Native Method)
+        at java.base@21.0.9/java.lang.Object.wait(Object.java:366)
+        at java.base@21.0.9/java.lang.Thread.join(Thread.java:2079)
+        at java.base@21.0.9/java.lang.Thread.join(Thread.java:2155)
+        at java.base@21.0.9/java.lang.ApplicationShutdownHooks.runHooks(ApplicationShutdownHooks.java:114)
+        at java.base@21.0.9/java.lang.ApplicationShutdownHooks$1.run(ApplicationShutdownHooks.java:47)
+        at java.base@21.0.9/java.lang.Shutdown.runHooks(Shutdown.java:130)
+        at java.base@21.0.9/java.lang.Shutdown.exit(Shutdown.java:167)
+        at java.base@21.0.9/java.lang.Terminator$1.handle(Terminator.java:51)
+        at java.base@21.0.9/jdk.internal.misc.Signal$1.run(Signal.java:218)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"Quarkus Test Cleanup Shutdown task" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@21.0.9/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:497)
+        at java.base@21.0.9/java.util.concurrent.FutureTask.get(FutureTask.java:203)
+        at org.apache.camel.impl.engine.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:215)
+        at org.apache.camel.impl.engine.DefaultShutdownStrategy.shutdownForced(DefaultShutdownStrategy.java:148)
+        at org.apache.camel.impl.engine.AbstractCamelContext.doStop(AbstractCamelContext.java:3171)
+        at org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:149)
+        at org.apache.camel.support.service.BaseService.stop(BaseService.java:167)
+        at org.apache.camel.impl.engine.AbstractCamelContext.stop(AbstractCamelContext.java:2321)
+        at org.apache.camel.quarkus.main.CamelMain.doStop(CamelMain.java:79)
+        at org.apache.camel.support.service.BaseService.stop(BaseService.java:167)
+        at org.apache.camel.quarkus.main.CamelMainRuntime.stop(CamelMainRuntime.java:72)
+        at org.apache.camel.quarkus.core.CamelBootstrapRecorder$1.run(CamelBootstrapRecorder.java:39)
+        at io.quarkus.runtime.StartupContext.runAllAndClear(StartupContext.java:79)
+        at io.quarkus.runtime.StartupContext.close(StartupContext.java:70)
+        at io.quarkus.runner.ApplicationImpl.doStop(Unknown Source)
+        at io.quarkus.runtime.Application.stop(Application.java:208)
+        at io.quarkus.runtime.Application.stop(Application.java:155)
+        at io.quarkus.runtime.Application.close(Application.java:137)
+        at io.quarkus.runner.bootstrap.StartupActionImpl$3.close(StartupActionImpl.java:362)
+        at io.quarkus.runner.bootstrap.RunningQuarkusApplicationImpl.close(RunningQuarkusApplicationImpl.java:35)
+        at io.quarkus.test.junit.QuarkusTestExtension$4.close(QuarkusTestExtension.java:266)
+        at io.quarkus.test.junit.QuarkusTestExtension$ExtensionState.doClose(QuarkusTestExtension.java:1177)
+        at io.quarkus.test.junit.QuarkusTestExtensionState.close(QuarkusTestExtensionState.java:114)
+        at io.quarkus.test.junit.QuarkusTestExtensionState$1.run(QuarkusTestExtensionState.java:89)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"vert.x-eventloop-thread-3" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@21.0.9/sun.nio.ch.EPoll.wait(Native Method)
+        at java.base@21.0.9/sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:121)
+        at java.base@21.0.9/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+        at java.base@21.0.9/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"Camel (camel-1) thread #4 - ShutdownTask" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/java.lang.Thread.sleep0(Native Method)
+        at java.base@21.0.9/java.lang.Thread.sleep(Thread.java:509)
+        at org.apache.camel.impl.engine.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:702)
+        at java.base@21.0.9/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+        at java.base@21.0.9/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"surefire-forkedjvm-last-ditch-daemon-shutdown-thread-30s" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@21.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1797)
+        at java.base@21.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@21.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"SIGINT handler" 
+   java.lang.Thread.State: BLOCKED
+        at java.base@21.0.9/java.lang.Shutdown.exit(Shutdown.java:166)
+        at java.base@21.0.9/java.lang.Terminator$1.handle(Terminator.java:51)
+        at java.base@21.0.9/jdk.internal.misc.Signal$1.run(Signal.java:218)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+"Camel (camel-1) thread #5 - Delay" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@21.0.9/sun.nio.ch.SocketDispatcher.read0(Native Method)
+        at java.base@21.0.9/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:47)
+        at java.base@21.0.9/sun.nio.ch.NioSocketImpl.tryRead(NioSocketImpl.java:256)
+        at java.base@21.0.9/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:307)
+        at java.base@21.0.9/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+        at java.base@21.0.9/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+        at java.base@21.0.9/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+        at java.base@21.0.9/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+        at java.base@21.0.9/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+        at java.base@21.0.9/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+        at java.base@21.0.9/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+        at java.base@21.0.9/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+        at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+        at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+        at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+        at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+        at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+        at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+        at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+        at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+        at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+        at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+        at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+        at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+        at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+        at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+        at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+        at com.google.genai.HttpApiClient.executeRequest(HttpApiClient.java:166)
+        at com.google.genai.HttpApiClient.request(HttpApiClient.java:86)
+        at com.google.genai.HttpApiClient.request(HttpApiClient.java:37)
+        at com.google.genai.Models.privateGenerateContent(Models.java:5418)
+        at com.google.genai.Models.generateContent(Models.java:6282)
+        at com.google.genai.Models.generateContent(Models.java:6356)
+        at com.gbook.api.beans.GeminiService.generateContent(GeminiService.java:30)
+        at com.gbook.api.beans.GeminiService_ClientProxy.generateContent(Unknown Source)
+        at java.base@21.0.9/java.lang.invoke.LambdaForm$DMH/0x0000742234034800.invokeVirtual(LambdaForm$DMH)
+        at java.base@21.0.9/java.lang.invoke.LambdaForm$MH/0x00007422342a5800.invoke(LambdaForm$MH)
+        at java.base@21.0.9/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+        at java.base@21.0.9/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:154)
+        at java.base@21.0.9/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+        at java.base@21.0.9/java.lang.reflect.Method.invoke(Method.java:580)
+        at org.apache.camel.support.ObjectHelper.invokeMethodSafe(ObjectHelper.java:493)
+        at org.apache.camel.component.bean.MethodInfo.invoke(MethodInfo.java:506)
+        at org.apache.camel.component.bean.MethodInfo$1.doProceed(MethodInfo.java:309)
+        at org.apache.camel.component.bean.MethodInfo$1.proceed(MethodInfo.java:286)
+        at org.apache.camel.component.bean.AbstractBeanProcessor.useMethodInvocation(AbstractBeanProcessor.java:123)
+        at org.apache.camel.component.bean.AbstractBeanProcessor.process(AbstractBeanProcessor.java:89)
+        at org.apache.camel.component.bean.BeanProcessor.process(BeanProcessor.java:81)
+        at org.apache.camel.component.bean.BeanProducer.process(BeanProducer.java:41)
+        at org.apache.camel.processor.SendProcessor.sendUsingProducer(SendProcessor.java:253)
+        at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:158)
+        at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.handleFirst(RedeliveryErrorHandler.java:440)
+        at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:416)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.doRun(DefaultReactiveExecutor.java:199)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.executeReactiveWork(DefaultReactiveExecutor.java:189)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.tryExecuteReactiveWork(DefaultReactiveExecutor.java:166)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:148)
+        at org.apache.camel.impl.engine.DefaultReactiveExecutor.schedule(DefaultReactiveExecutor.java:54)
+        at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:421)
+        at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.done(RedeliveryErrorHandler.java:392)
+        at org.apache.camel.processor.DelayProcessorSupport$ProcessCall$1.done(DelayProcessorSupport.java:79)
+        at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:61)
+        at org.apache.camel.processor.DelayProcessorSupport$ProcessCall.run(DelayProcessorSupport.java:70)
+        at java.base@21.0.9/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+        at java.base@21.0.9/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at java.base@21.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base@21.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@21.0.9/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.9/java.lang.Thread.run(Thread.java:1583)
+
+
+

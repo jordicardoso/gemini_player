@@ -10,7 +10,7 @@ import java.util.Optional;
 public class JsonGamebook {
     private Meta meta;
     private List<Node> nodes;
-    private List<Edge> edges;
+    // private List<Edge> edges; // Removed in new version
     private List<Asset> assets;
     private List<Object> variables;
     private Viewport viewport;
@@ -26,8 +26,10 @@ public class JsonGamebook {
     public List<Node> getNodes() { return nodes; }
     public void setNodes(List<Node> nodes) { this.nodes = nodes; }
 
-    public List<Edge> getEdges() { return edges; }
-    public void setEdges(List<Edge> edges) { this.edges = edges; }
+    // Edges are no longer used in the new format, but we keep the field to avoid JSON parsing errors if present
+    // or we can just ignore it via @JsonIgnoreProperties
+    // public List<Edge> getEdges() { return edges; }
+    // public void setEdges(List<Edge> edges) { this.edges = edges; }
 
     public List<Asset> getAssets() { return assets; }
     public void setAssets(List<Asset> assets) { this.assets = assets; }
